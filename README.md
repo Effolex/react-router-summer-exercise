@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Requisitos da dinâmica
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Crie as rotas necessárias para a aplicação
+Você deve utilizar o `BrowserRouter` pra criar as rotas da sua aplicação e cada rota deverá renderizar um componente específico. Crie cada componente dentro da pasta `src/pages`, conforme o indicado abaixo:
 
-## Available Scripts
+- a rota `/` deve renderizar um componente chamado `Home`;
 
-In the project directory, you can run:
+- a rota `/history` deve renderizar um componente chamado `History`;
 
-### `npm start`
+- a rota `/search/:searchTerm` deve renderizar um componente chamado `Search`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 2. Crie um componente de navbar
+Crie um componente chamado `Nav`, dentro da pasta `src/components`.
 
-### `npm test`
+  * Crie esse componente com a tag `nav` envolvendo todo seu conteúdo;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * Renderize o componente de navbar nas páginas das rotas `/`, `/history`, `/search/:searchTerm`;
 
-### `npm run build`
+  * Deve possuir dois links, que redirecionam para as rotas `/` e `/history`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 3. Crie um formulário para pesquisa
+Dentro do componente `Home`, que é renderizado na rota `/`, crie um formulário para que a pessoa usuária insira o conteúdo da pesquisa.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  * Você deve criar um campo para que a pessoa usuária insira sua pesquisa;
 
-### `npm run eject`
+  * Crie um botão com o texto `Pesquisar`;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  * Ao clicar no botão `Pesquisar`, você deve ser redirecionado para a rota `/search/:seachTerm`, onde `searchTerm` é o termo pesquisado.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 4. Crie uma página que renderiza o termo pesquisado
+Crie o componente `Search`, que é renderizado na rota `/search/:searchTerm`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  * Exiba o nome do termo pesquisado na tela.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 5. Armazene um histórico dos termos pesquisados
+Armazene um array dos termos pesquisados.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  * Armaze os termos pesquisados em um array, de forma que a página `History` possa resgatar esses valores.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 6. Crie uma página que renderiza o histórico de termos pesquisados
+Crie o componente `History`, que é renderizado na rota `/history`.
 
-### Analyzing the Bundle Size
+  * Exiba um histórico de todos os termos pesquisados na tela.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
